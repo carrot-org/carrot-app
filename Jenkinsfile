@@ -22,7 +22,7 @@ pipeline {
                 echo 'terraform plan'
             }
         }
-        stage('Run Build') {
+        stage('Run Deploy (Apply)') {
             input {
                 message "Should we deploy?"
                 ok "Yes, deploy!"
