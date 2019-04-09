@@ -1,4 +1,4 @@
 plan:
-  cd terraform && terraform plan
+	cd terraform && terraform plan
 apply:
-  cd terraform && terraform apply
+	cd terraform && terraform apply
