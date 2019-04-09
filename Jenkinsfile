@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'ecs-general'
+            label 'general'
         }
     }
     stages {
