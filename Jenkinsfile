@@ -21,8 +21,8 @@ pipeline {
             agent { label 'terraform' }
             steps {
                 echo 'Running Terraform Plan'
-                sleep 3
                 echo 'terraform plan'
+                sh 'make plan'
             }
         }
         stage('Run Deploy (Apply)') {
@@ -33,8 +33,8 @@ pipeline {
             }
             steps {
                 echo 'Running Apply'
-                sleep 3
                 echo 'terraform apply'
+                sh 'make apply'
             }
         }
     }
