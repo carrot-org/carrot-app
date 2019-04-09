@@ -1,4 +1,4 @@
 plan:
-	cd terraform && terraform plan
+	cd terraform && terraform init && terraform plan
 apply:
-	cd terraform && terraform apply
+	cd terraform && terraform init && terraform apply
