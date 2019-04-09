@@ -6,8 +6,7 @@ locals {
 
 resource "random_id" "ghost_fs_id" {
   keepers {
-    name      = "${var.
-    }"
+    name      = "${var.alb_arn}"
     app_index = "${var.app_index}"
   }
 
