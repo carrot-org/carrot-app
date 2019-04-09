@@ -27,7 +27,7 @@ variable "target_type" {
 }
 
 variable "app_index" {
-  default = 1
+  default = 100
 }
 
 variable "alb_protocols" {
