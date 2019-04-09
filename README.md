@@ -1,3 +1,1 @@
 # Carrot App
-
-General purpose
