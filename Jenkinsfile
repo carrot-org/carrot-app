@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'ecs-general'
+        }
+    }
     stages {
         stage('Run Build') {
             steps {
