@@ -1,11 +1,7 @@
 pipeline {
-    agent {
-        node {
-            label 'general'
-        }
-    }
     stages {
         stage('Run Build') {
+            agent { label 'general' }
             steps {
                 echo 'Running Build'
                 sleep 3
@@ -13,6 +9,7 @@ pipeline {
             }
         }
         stage('Run Tests') {
+            agent { label 'general' }
             steps {
                 echo 'Running Tests'
                 sleep 3
@@ -20,6 +17,7 @@ pipeline {
             }
         }
         stage('Run Plan') {
+            agent { label 'terraform' }
             steps {
                 echo 'Running Terraform Plan'
                 sleep 3
@@ -27,6 +25,7 @@ pipeline {
             }
         }
         stage('Run Deploy (Apply)') {
+            agent { label 'terraform' }
             input {
                 message "Should we deploy?"
                 ok "Yes, deploy!"
