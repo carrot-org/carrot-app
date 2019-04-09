@@ -1,0 +1,22 @@
+[
+  {
+    "image": "ghost:2-alpine",
+    "cpu": 128,
+    "memoryReservation": 128,
+    "volumesFrom": [],
+    "essential": true,
+    "name": "ghost",
+    "portMappings": [
+      {
+        "containerPort": 2368,
+        "hostPort": 0
+      }
+    ],
+    "environment": [
+        {
+            "name": "url",
+            "value": "http://example.com"
+        }
+    ]
+  }
+]
