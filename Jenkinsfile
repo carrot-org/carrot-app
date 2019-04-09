@@ -10,7 +10,6 @@ pipeline {
                 echo 'Running Build'
                 sleep 3
                 echo 'docker build -t gitsha .'
-                sh 'docker build .'
             }
         }
         stage('Run Tests') {
