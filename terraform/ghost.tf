@@ -31,7 +31,7 @@ resource "random_id" "ghost_tg_id" {
 }
 
 data "template_file" "ghost-task-definition-json" {
-  template = "${file("app/ghost/task-definitions/ghost.json")}"
+  template = "${file("ghost.json")}"
 
   vars {
     hostname = "${random_id.ghost_tg_id.hex}.${var.tld}"
