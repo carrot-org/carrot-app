@@ -60,21 +60,6 @@ resource "aws_ecs_service" "ghost" {
   }
 }
 
-resource "aws_lb_listener_rule" "host_based_routing" {
-  listener_arn = "${var.alb_listener_arn}"
-  priority     = "${var.app_index}"
-
-  action {
-    type             = "forward"
-    target_group_arn = "${aws_lb_target_group.ghost_http.arn}"
-  }
-
-  condition {
-    field  = "host-header"
-    values = ["${random_id.ghost_tg_id.hex}.${var.tld}"]
-  }
-}
-
 resource "aws_lb_target_group" "ghost_http" {
   lifecycle {
     create_before_destroy = true
