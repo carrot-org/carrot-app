@@ -5,7 +5,7 @@ pipeline {
             agent { label 'general' }
             steps {
                 echo 'Running Build'
-                sleep 900
+                sleep 9
                 echo 'docker build -t gitsha .'
             }
         }
